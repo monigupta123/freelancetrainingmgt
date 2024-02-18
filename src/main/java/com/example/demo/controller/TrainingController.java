@@ -19,7 +19,7 @@ import com.example.demo.model.Training;
 import com.example.demo.service.TrainingService;
 
 @RestController
-@CrossOrigin("http://localhost:3000")
+//@CrossOrigin("http://localhost:3000")
 @RequestMapping(path="/training")
 public class TrainingController {
 

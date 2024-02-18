@@ -15,4 +15,8 @@ public interface FreelancerService {
 	
 	public void deleteById(Integer id);
 
+	Freelancer getFreelancerByEmailId(String emailId);
+
+	Freelancer login(Freelancer fr);
+
 }
