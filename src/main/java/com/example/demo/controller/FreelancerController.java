@@ -18,7 +18,7 @@ import com.example.demo.model.Freelancer;
 import com.example.demo.service.FreelancerService;
 
 @RestController
-@CrossOrigin("http://localhost:3000")
+//@CrossOrigin("http://localhost:3000")
 @RequestMapping(path="/freelancer")
 public class FreelancerController {
 	
@@ -40,6 +40,12 @@ public class FreelancerController {
 	@DeleteMapping("/{id}")
 	public void deleteFrrealnce(@PathVariable Integer id){
 		freelancerService.deleteById(id);
+	}
+
+	@PostMapping("/login")
+	public ResponseEntity<Freelancer> login(@RequestBody Freelancer fr ){
+		Freelancer freelancer = freelancerService.login(fr);
+		return new ResponseEntity<>(freelancer,HttpStatus.OK);
 	}
 	
 }
